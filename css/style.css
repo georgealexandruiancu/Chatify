@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i');
+body, html{
+    margin: 0;
+    padding: 0;
+background: rgb(199,44,65);
+background: radial-gradient(circle, rgba(199,44,65,1) 0%, rgba(81,10,50,1) 86%, rgba(45,20,44,1) 100%);
+font-family: 'Lato', sans-serif;
+}
+/* 
+#ee4540
+#c72c41
+#801336
+#510A32 
+#2D142C  */
+
+#chatBox{
+    width: 400px;
+    height: 500px;
+    background: white;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 35px;
+    overflow: hidden;
+    -webkit-box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.75);
+}
+#chatBox .title{
+   
+    height: 50px;
+    font-size: 1rem;
+    padding: 0px;
+    background: #2D142C;
+    color: white;
+}
+#chatBox .title p{
+    padding: 0;
+    margin: 0;
+    width: 125px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.content{
+    height: 375px;
+    max-height: 375px;
+    overflow: auto;
+}
+.content .holder{
+   
+    width: 100%;
+    min-height: 50px;
+    display: flex;
+    flex-direction: column; 
+}
+.content .recipient{
+    align-self: flex-start;
+    /* position: absolute; */
+    margin-left: 10px;
+    padding: 10px;
+    max-width: 250px;
+    margin-top: 10px;
+    background: rgba(209, 209, 209, 0.521);
+    border-radius: 13px;
+    color: black;
+    overflow-wrap: break-word;
+}  
+.content .sender{
+    overflow-wrap: break-word;
+    align-self: flex-end;
+    margin-right: 10px;
+    padding: 10px;
+    width: ;
+    margin-top: 10px;
+    background: #ee4540;
+    border-radius: 13px;
+    color: white;
+    font-weight: 900;
+}  
+.input-send{
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+:focus{outline: none;}
+.effect{border: 0; padding: 7px 0;;}
+.effect ~ .focus-border{position: absolute; bottom: 23px; left: 15; width: 320px; height: 2px; z-index: 99;}
+.effect ~ .focus-border:before, 
+.effect ~ .focus-border:after{content: ""; position: absolute; bottom: 0; left: 0; width: 0; height: 100%; background-color: #ee4540; transition: 0.4s;}
+.effect ~ .focus-border:after{left: auto; right: 0;}
+.effect:focus ~ .focus-border:before, 
+.effect:focus ~ .focus-border:after{width: 50%; transition: 0.4s;}
+input[type="text"]{font: 15px/24px "Lato", Arial, sans-serif; color: #333;margin-left: 15px; width: 320px; box-sizing: border-box; letter-spacing: 1px;}
+
+.btn-send{
+    position: absolute;
+    right: 25px;
+    bottom: 27px;
+    font-size:  15px/24px;
+    color: black;
+    transition: 0.4s;
+}
+.effect:focus ~ .btn-send{
+    color: #ee4540;
+}
